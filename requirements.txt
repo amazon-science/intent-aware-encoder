@@ -1,0 +1,15 @@
+transformers==4.18.0
+numpy==1.23.0
+torch==1.11.0
+PyYAML==6.0
+regex==2022.6.2
+tqdm==4.64.0
+tensorboardX==2.5.1
+sentencepiece==0.1.96
+nltk==3.7
+pytorch-metric-learning==1.5.0
+sentence-transformers==2.2.2
+sacrebleu==2.1.0
+allennlp==2.9.3
+cached-path==1.1.2
+https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.2.0/en_core_web_md-3.2.0.tar.gz#egg=en_core_web_md
