@@ -45,3 +45,15 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This project is licensed under the Apache-2.0 License.
+
+Please cite the following paper if using the code or data from this project in your work:
+```bibtex
+@misc{sung2023pretraining,
+      title={Pre-training Intent-Aware Encoders for Zero- and Few-Shot Intent Classification}, 
+      author={Mujeen Sung and James Gung and Elman Mansimov and Nikolaos Pappas and Raphael Shu and Salvatore Romeo and Yi Zhang and Vittorio Castelli},
+      year={2023},
+      eprint={2305.14827},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
