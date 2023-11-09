@@ -67,7 +67,7 @@ class ContrastiveLearningDataset(Dataset):
         # gold_utterances: utternaces with the same gold intent as the input utterance
         gold_utterances = [u for u in self.intent2utterances[gold_intent] if u != utterance]
 
-        if not gold_utterances:
+        if len(gold_utterances)>0:
             gold_utterance = random.sample(gold_utterances,k = 1)[0]
         else: # random masking
             gold_utterance = erase_and_mask(utterance, self.tokenizer, mask_len=int(self.random_span_mask))
