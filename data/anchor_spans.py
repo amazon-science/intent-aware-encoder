@@ -13,6 +13,8 @@ from dataclasses import dataclass, asdict, replace
 from pathlib import Path
 from typing import Dict, List
 
+from tqdm import tqdm
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--sgd-dir',
                     help='Path to SGD repository root directory from'
@@ -80,7 +82,7 @@ def anchor_spans_from_sgd(sgd_dir: Path, offsets_file: Path) -> List[LabeledUtte
     uid_to_utterance = {
         (utt.dialogue, utt.turn): utt for utt in LabeledUtterance.read_lines(offsets_file)
     }
-    for dialogues_path in sorted(sgd_dir.glob('train/dialogues*.json')):
+    for dialogues_path in tqdm(sorted(sgd_dir.glob('train/dialogues*.json'))):
         dialogues = json.loads(dialogues_path.read_text(encoding='utf-8'))
         for dialogue in dialogues:
             for i, turn in enumerate(dialogue['turns']):
