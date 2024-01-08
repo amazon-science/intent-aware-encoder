@@ -17,7 +17,7 @@ from allennlp.modules import TextFieldEmbedder, Seq2SeqEncoder
 from allennlp.modules.conditional_random_field import allowed_transitions, ConditionalRandomField
 from allennlp.predictors import Predictor
 
-from irl.intent_role_labelers import LabeledSpan
+from irl.data import LabeledSpan
 from irl.utils import labels_to_spans
 
 logger = logging.getLogger(__name__)
